@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+       <title>Insertion at end </title>
+</head>
+
+<body>
+    <script>
+        //var head;
+        class Node {
+            constructor(d) {
+                this.value = d;
+                this.next = null;
+            }
+        }
+        class insertElement {
+            constructor() {
+                this.next = null;
+            }
+            insert(d) {
+                var new_node = new Node(d);
+                var last;
+                if (this.head == null) {
+                    this.head = new_node;
+                }
+                else {
+                    last = this.head;
+                    while (last.next) {
+                        last = last.next;
+                    }
+                    last.next = new_node;
+                }
+            }
+            printlist() {
+                var las = this.head;
+                while (las) {
+                    console.log(las.value);
+                    las = las.next;
+                }
+            }
+        }
+
+    var list = new insertElement();
+        
+        list.insert(1);
+        list.insert(2);
+        list.insert(5);
+        list.insert(6);
+        list.insert(8);
+        //list.add(d)
+        list.printlist();
+
+
+
+    </script>
+</body>
+
+</html>
